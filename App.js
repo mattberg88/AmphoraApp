@@ -1,11 +1,12 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import AmphoraButton from './src/components/AmphoraButton'
+import { StyleSheet, View } from 'react-native';
 
 export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text>App!</Text>
+        <AmphoraButton></AmphoraButton>
       </View>
     );
   }
