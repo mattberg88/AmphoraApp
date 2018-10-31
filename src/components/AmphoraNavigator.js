@@ -13,7 +13,6 @@ import {
   View
 } from 'react-native';
 
-import Icon from 'react-native-vector-icons/MaterialIcons';
 import Iconz from 'react-native-vector-icons/Ionicons';
 
 export default class Nav extends Component {
@@ -24,7 +23,7 @@ export default class Nav extends Component {
         <TouchableOpacity onPress={this.props.toProfile}>
           <Iconz name="ios-person" color="#888" size={25} style={{ margin: 10 }} />
         </TouchableOpacity>
-        <Image source={require('../img/amphora-icon.png')} resizeMode="contain" style={{ width: 100, height: 30 }} />
+          <Text style={styles.title}>Amphora</Text>        
         <TouchableOpacity onPress={this.props.chat}>
           <Iconz name="ios-chatboxes-outline" color="#555" size={25} style={{ margin: 10 }} />
         </TouchableOpacity>
@@ -84,4 +83,7 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
     borderColor: 'rgba(0,0,0,0.1)'
   },
+  title:{
+    fontWeight: 'bold'
+  }
 });

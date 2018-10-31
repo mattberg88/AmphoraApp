@@ -7,11 +7,10 @@ export default class AmphoraButton extends React.Component{
     super(props);
     console.log(props.photo)
   }
-  onPress() {
-    console.log('press') 
+  onPress = () => {
+    this.props.onClick();
   }
   renderButtonIcon() {
-    console.log(this.props.photo)
     switch(this.props.photo){
     case 'amphora' :
     return require('../img/amphora-icon.png')
@@ -29,7 +28,7 @@ export default class AmphoraButton extends React.Component{
     return (
       <TouchableOpacity
         style={styles.button}
-        onPress={() => this.onPress()}
+        onPress={this.onPress}
       ><Image style={styles.img}
         source={this.renderButtonIcon()}
         />
